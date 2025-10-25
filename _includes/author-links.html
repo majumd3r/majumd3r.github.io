@@ -99,7 +99,7 @@
          </a>
       </li>
       {%- endif -%}
-      {%- if site.feed -%}
+      {%- if site.feed.path -%}
       <li title="RSS Feed">
           <a class="button button--circle rss-button" href="{{ site.feed.path | default: '/feed.xml' }}" target="_blank">
               <div class="icon">{%- include svg/icon/social/rss.svg -%}</div>
