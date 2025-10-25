@@ -1,5 +1,9 @@
 <footer class="footer py-4 js-page-footer">
   <div class="main">
+    <div class="footer__author-links">
+      {%- include author-links.html author=site.author -%}
+    </div>
+
     <div class="site-info mt-2" style="text-align:center;">
       © {{ site.time | date: "%Y" }} by, Sayak Majumder
     </div>
