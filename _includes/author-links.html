@@ -99,10 +99,12 @@
          </a>
       </li>
       {%- endif -%}
-      <li>
-         <a href="{{ '/feed.xml' | relative_url }}" target="_blank" title="RSS Feed">
-         <i class="fas fa-rss"></i>
-         </a>
+      {%- if site.feed -%}
+      <li title="RSS Feed">
+          <a class="button button--circle rss-button" href="{{ site.feed.path | default: '/feed.xml' }}" target="_blank">
+              <div class="icon">{%- include svg/icon/social/rss.svg -%}</div>
+          </a>
       </li>
+      {%- endif -%}
    </ul>
 </div>
